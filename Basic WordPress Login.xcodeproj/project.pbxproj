@@ -13,6 +13,8 @@
 		7F6963A81B7AAA6700538E7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F6963A71B7AAA6700538E7E /* Images.xcassets */; };
 		7F6963AB1B7AAA6700538E7E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6963A91B7AAA6700538E7E /* LaunchScreen.xib */; };
 		7F6963B71B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6963B61B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift */; };
+		7FC7FC251B7AE2D800A2CD56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */; };
+		E79C945D453D30120C3D2FA5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699703C774D0F9074E85392A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00A69728BC3B1AAFCAA60942 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		699703C774D0F9074E85392A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F69639B1B7AAA6700538E7E /* Basic WordPress Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic WordPress Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F69639F1B7AAA6700538E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6963A01B7AAA6700538E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		7F6963B01B7AAA6700538E7E /* Basic WordPress LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Basic WordPress LoginTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6963B51B7AAA6700538E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6963B61B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic_WordPress_LoginTests.swift; sourceTree = "<group>"; };
+		7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CACD1E20BF886348C2F357CB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79C945D453D30120C3D2FA5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29827C666C0724C951FE372F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				699703C774D0F9074E85392A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A2ABA2024A0F5073F3BF2A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CACD1E20BF886348C2F357CB /* Pods.debug.xcconfig */,
+				00A69728BC3B1AAFCAA60942 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7F6963921B7AAA6700538E7E = {
 			isa = PBXGroup;
 			children = (
 				7F69639D1B7AAA6700538E7E /* Basic WordPress Login */,
 				7F6963B31B7AAA6700538E7E /* Basic WordPress LoginTests */,
 				7F69639C1B7AAA6700538E7E /* Products */,
+				6A2ABA2024A0F5073F3BF2A7 /* Pods */,
+				29827C666C0724C951FE372F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +106,7 @@
 				7F6963A01B7AAA6700538E7E /* AppDelegate.swift */,
 				7F6963A21B7AAA6700538E7E /* ViewController.swift */,
 				7F6963A41B7AAA6700538E7E /* Main.storyboard */,
+				7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */,
 				7F6963A71B7AAA6700538E7E /* Images.xcassets */,
 				7F6963A91B7AAA6700538E7E /* LaunchScreen.xib */,
 				7F69639E1B7AAA6700538E7E /* Supporting Files */,
@@ -119,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F6963BA1B7AAA6700538E7E /* Build configuration list for PBXNativeTarget "Basic WordPress Login" */;
 			buildPhases = (
+				2B304BB1A34F9458A2E4A5F0 /* Check Pods Manifest.lock */,
 				7F6963971B7AAA6700538E7E /* Sources */,
 				7F6963981B7AAA6700538E7E /* Frameworks */,
 				7F6963991B7AAA6700538E7E /* Resources */,
+				2084693C92D6842D91B2C3F5 /* Embed Pods Frameworks */,
+				96EFC6AEE8168A86698E2AD9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,11 +237,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2084693C92D6842D91B2C3F5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B304BB1A34F9458A2E4A5F0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96EFC6AEE8168A86698E2AD9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F6963971B7AAA6700538E7E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC7FC251B7AE2D800A2CD56 /* LoginViewController.swift in Sources */,
 				7F6963A31B7AAA6700538E7E /* ViewController.swift in Sources */,
 				7F6963A11B7AAA6700538E7E /* AppDelegate.swift in Sources */,
 			);
@@ -338,6 +417,7 @@
 		};
 		7F6963BB1B7AAA6700538E7E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CACD1E20BF886348C2F357CB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Basic WordPress Login/Info.plist";
@@ -348,6 +428,7 @@
 		};
 		7F6963BC1B7AAA6700538E7E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00A69728BC3B1AAFCAA60942 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Basic WordPress Login/Info.plist";
@@ -409,6 +490,7 @@
 				7F6963BC1B7AAA6700538E7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F6963BD1B7AAA6700538E7E /* Build configuration list for PBXNativeTarget "Basic WordPress LoginTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +499,7 @@
 				7F6963BF1B7AAA6700538E7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
