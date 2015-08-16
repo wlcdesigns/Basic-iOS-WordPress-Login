@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2DCF7D1B811739001BBE2F /* Needs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2DCF7C1B811739001BBE2F /* Needs.swift */; };
 		7F6963A11B7AAA6700538E7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6963A01B7AAA6700538E7E /* AppDelegate.swift */; };
 		7F6963A31B7AAA6700538E7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6963A21B7AAA6700538E7E /* ViewController.swift */; };
 		7F6963A61B7AAA6700538E7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F6963A41B7AAA6700538E7E /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		00A69728BC3B1AAFCAA60942 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		699703C774D0F9074E85392A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F2DCF7C1B811739001BBE2F /* Needs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Needs.swift; sourceTree = "<group>"; };
 		7F69639B1B7AAA6700538E7E /* Basic WordPress Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic WordPress Login.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F69639F1B7AAA6700538E7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6963A01B7AAA6700538E7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				7F6963A01B7AAA6700538E7E /* AppDelegate.swift */,
 				7F6963A21B7AAA6700538E7E /* ViewController.swift */,
+				7F2DCF7C1B811739001BBE2F /* Needs.swift */,
 				7F6963A41B7AAA6700538E7E /* Main.storyboard */,
 				7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */,
 				7F6963A71B7AAA6700538E7E /* Images.xcassets */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FC7FC251B7AE2D800A2CD56 /* LoginViewController.swift in Sources */,
+				7F2DCF7D1B811739001BBE2F /* Needs.swift in Sources */,
 				7F6963A31B7AAA6700538E7E /* ViewController.swift in Sources */,
 				7F6963A11B7AAA6700538E7E /* AppDelegate.swift in Sources */,
 			);

@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
     
         if !username.text.isEmpty && !password.text.isEmpty
         {
-            Alamofire.request(.POST, "http://127.0.0.1/~wlc/beta-pro/", parameters: [
+            Alamofire.request(.POST, myWordPressSite, parameters: [
                 "check_login": 2,
                 "ios_userlogin":username.text,
                 "ios_userpassword":password.text

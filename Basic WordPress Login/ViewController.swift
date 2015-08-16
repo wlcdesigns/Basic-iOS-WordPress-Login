@@ -21,7 +21,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        Alamofire.request(.POST, "http://127.0.0.1/~wlc/beta-pro/", parameters: ["check_login": 1])
+        Alamofire.request(.POST, myWordPressSite, parameters: ["check_login": 1])
             .responseJSON { request, response, json, error in
                 
                 if(error != nil) {
