@@ -19,11 +19,8 @@ class LoginViewController: UIViewController {
     
     //inititalize the delegate
     var delegate:LoginViewControllerDelegate!
-    
-    let messages:[Int:String] = [
-        1:"Invalid username. Please try again.",
-        2:"Invalid password. Please try again.",
-    ]
+
+    lazy var json : JSON = JSON.null
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -35,53 +32,63 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginToWordPress(sender: AnyObject) {
+        
+        if !username.text!.isEmpty && !password.text!.isEmpty{
+            remoteLogin(username.text!, password: password.text!)
+        }
+    }
     
-        if !username.text.isEmpty && !password.text.isEmpty
-        {
-            Alamofire.request(.POST, myWordPressSite, parameters: [
-                "check_login": 2,
-                "ios_userlogin":username.text,
-                "ios_userpassword":password.text
-                ]).responseJSON { request, response, json, error in
+    func remoteLogin(user: String, password: String)
+    {
+        Alamofire.request(.POST, myWordPressSite, parameters: [
+            "check_login": 2,
+            "ios_userlogin":user,
+            "ios_userpassword":password
+            ]).responseJSON { response in
+                
+                //Check if response is valid and not empty
+                guard let data = response.result.value else{
+                    self.loginAlert("Login Failed")
+                    return
+                }
+                
+                //Convert data response to json object
+                self.json = JSON(data)
+                
+                //Check for serverside login errors
+                guard self.json["error"] == nil else{
                     
-                    if(error != nil) {
-                        NSLog("Error: \(error)")
-                    }else{
-                        if json != nil
-                        {
-                            var json = JSON(json!)
-                            
-                            if json["error"] != nil{
-                                //Alert error messages
-                                if let error = json["error"].int{
-                                    self.loginAlert(self.messages[error]!)
-                                }
-                            }else{
-                                
-                                if json["data"]["display_name"] != nil{
-                                    if let name = json["data"]["display_name"].string{
-                                        
-                                        //Pass display name to delegate's "sendUser" method
-                                        self.delegate?.sendUser(name)
-                                        
-                                        //Return to parent
-                                        self.dismissViewControllerAnimated(true, completion: {
-                                            action in
-                                        })
-
-                                    }
-                                }
-                            }
-                        }
+                    switch(self.json["error"])
+                    {
+                    case 1:
+                        self.loginAlert("Invalid Username")
+                        
+                    case 2:
+                        self.loginAlert("Invalid Password")
+                        
+                    default:
+                        self.loginAlert("Login Failure")
                     }
                     
+                    return
                 }
+                
+                //Return to homescreen with welcome message
+                guard let name = self.json["data"]["display_name"].string else{
+                    return
+                }
+                
+                self.delegate?.sendUser(name)
+                
+                self.dismissViewControllerAnimated(true, completion: {
+                    action in
+                })
         }
     }
     
     func loginAlert(alertMessage: String)
     {
-        var loginAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        let loginAlert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: UIAlertControllerStyle.Alert)
         
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
         
@@ -94,16 +101,5 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

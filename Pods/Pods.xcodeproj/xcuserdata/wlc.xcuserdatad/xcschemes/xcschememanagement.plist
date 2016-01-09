@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Alamofire.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SwiftyJSON.xcscheme</key>
+		<key>Pods-Basic WordPress Login.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,20 +19,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4571D97B2DA4E088DA2B1FE0</key>
+		<key>2CA6AEEF56E2230F9C486B3C78906358</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92F8BAF99658526A77E959CB</key>
+		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E2693EA2E2C0B29B292B54A</key>
+		<key>57CFC4DF5A94826729A3A532FC59EE52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFFF8A4457E8EC54B6404B35E5CBEAA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

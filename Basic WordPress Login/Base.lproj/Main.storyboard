@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e6L-q9-efq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e6L-q9-efq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,12 +20,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="AdJ-A8-aum">
-                                <rect key="frame" x="16" y="37" width="568" height="30"/>
+                                <rect key="frame" x="20" y="37" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="AG4-Po-U4z">
-                                <rect key="frame" x="16" y="88" width="568" height="30"/>
+                                <rect key="frame" x="20" y="88" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -78,11 +79,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ZW9-Wn-4gw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F1p-aL-wJN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1D-Jr-0nJ">
-                                <rect key="frame" x="16" y="56" width="568" height="47"/>
+                                <rect key="frame" x="16" y="56" width="343" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="s1D-Jr-0nJ" secondAttribute="height" multiplier="568:47" id="jkw-Do-fzE"/>
                                 </constraints>
@@ -91,22 +92,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-x7-qf7">
-                                <rect key="frame" x="16" y="137" width="568" height="56"/>
+                                <rect key="frame" x="22" y="119" width="330" height="46"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fJK-x7-qf7" secondAttribute="height" multiplier="71:7" id="Rvf-K7-ei2"/>
-                                    <constraint firstAttribute="height" constant="56" id="sTc-4y-b85"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Proceed to Login">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="sTc-4y-b85"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="goLogin:" destination="e6L-q9-efq" eventType="touchUpInside" id="wDQ-fh-u64"/>
                                 </connections>
@@ -114,17 +106,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fJK-x7-qf7" firstAttribute="trailing" secondItem="F1p-aL-wJN" secondAttribute="trailingMargin" id="ChU-hP-iK0"/>
-                            <constraint firstAttribute="centerX" secondItem="fJK-x7-qf7" secondAttribute="centerX" id="Iae-dY-AvC"/>
+                            <constraint firstItem="fJK-x7-qf7" firstAttribute="top" secondItem="s1D-Jr-0nJ" secondAttribute="bottom" constant="35" id="4rY-aj-yZl"/>
+                            <constraint firstItem="fJK-x7-qf7" firstAttribute="centerX" secondItem="s1D-Jr-0nJ" secondAttribute="centerX" id="URc-OM-iTH"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="top" secondItem="pGN-bo-1OC" secondAttribute="bottom" constant="36" id="VH7-QF-3GG"/>
                             <constraint firstAttribute="centerX" secondItem="s1D-Jr-0nJ" secondAttribute="centerX" id="WRc-vM-AOL"/>
-                            <constraint firstItem="fJK-x7-qf7" firstAttribute="leading" secondItem="F1p-aL-wJN" secondAttribute="leadingMargin" id="hO8-kd-fVz"/>
-                            <constraint firstAttribute="width" secondItem="fJK-x7-qf7" secondAttribute="height" multiplier="75:7" id="hzQ-oZ-mOY"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="trailing" secondItem="F1p-aL-wJN" secondAttribute="trailingMargin" id="jVL-yj-YaE"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="leading" secondItem="F1p-aL-wJN" secondAttribute="leadingMargin" id="ng2-Ca-GWb"/>
-                            <constraint firstItem="fJK-x7-qf7" firstAttribute="top" secondItem="s1D-Jr-0nJ" secondAttribute="bottom" constant="34" id="zL7-fe-8re"/>
+                            <constraint firstItem="ZW9-Wn-4gw" firstAttribute="top" secondItem="fJK-x7-qf7" secondAttribute="bottom" constant="502" id="zDh-qj-RDS"/>
+                            <constraint firstItem="fJK-x7-qf7" firstAttribute="leading" secondItem="F1p-aL-wJN" secondAttribute="leadingMargin" constant="6" id="zOQ-xS-dDv"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginMessage" destination="s1D-Jr-0nJ" id="gWN-QH-Dph"/>
                         <outlet property="proceedButton" destination="fJK-x7-qf7" id="mAY-YP-gZi"/>
@@ -132,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IlI-wm-3iS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="323"/>
+            <point key="canvasLocation" x="163.5" y="322.5"/>
         </scene>
     </scenes>
 </document>

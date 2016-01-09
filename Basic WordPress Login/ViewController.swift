@@ -15,49 +15,45 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
     @IBOutlet weak var loginMessage: UILabel!
     @IBOutlet weak var proceedButton: UIButton!
     
-    let logginInMessage = "You are not logged in."
+    lazy var json : JSON = JSON.null
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        checkLogin()
+    }
+    
+    func checkLogin()
+    {
         Alamofire.request(.POST, myWordPressSite, parameters: ["check_login": 1])
-            .responseJSON { request, response, json, error in
+            .responseJSON { response in
                 
-                if(error != nil) {
-                    
-                    NSLog("Error: \(error)")
-                    
-                }else{
-                    
-                    if json != nil{ //Make sure the retrieved JSON object is not empty
-                        
-                        //cast the retrieved json as a SwiftyJSON object
-                        var json = JSON(json!)
-                        
-                        //Check if we're not logged in...
-                        if let loggedIn = json["logged_in"].int{
-                            
-                            if loggedIn == 0{
-                                self.loginMessage.text = self.logginInMessage
-                                self.proceedButton.hidden = false
-                            }
-                            
-                        }else{
-                            
-                            /* If we are logged in.
-                             * If yes, display welcome message
-                             */
-                            
-                            if json["data"]["display_name"] != nil{
-                                if let name = json["data"]["display_name"].string{
-                                    self.welcomeMessage(name)
-                                }
-                            }
-                        }
-                    }
+                //Check if response is valid and not empty
+                guard let data = response.result.value else{
+                    self.loginMessage.text = "Request failed"
+                    return
                 }
-            }
+                
+                //Convert data response to json object
+                self.json = JSON(data)
+                
+                //Check if logged in
+                guard self.json["logged_in"] != 0 else{
+                    
+                    self.loginMessage.text = "You are not logged in."
+                    self.proceedButton.hidden = false
+                    
+                    return
+                }
+                
+                //If logged in, return welcome message
+                guard let name = self.json["data"]["display_name"].string else{
+                    return
+                }
+                
+                self.welcomeMessage(name)
+                
+        }
     }
     
     /* Required method LoginViewControllerDelegate
@@ -78,7 +74,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
         loginViewController.modalPresentationStyle = .Popover
         
         if let popoverController = loginViewController.popoverPresentationController {
-            popoverController.sourceView = sender as! UIView
+            popoverController.sourceView = sender as? UIView
             popoverController.sourceRect = sender.bounds
             popoverController.permittedArrowDirections = .Any
             popoverController.delegate = self
@@ -90,11 +86,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .FullScreen
     }
-    
-    func presentationController(controller: UIPresentationController!, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController!?{
-        return UINavigationController(rootViewController: controller.presentedViewController)
-    }
-    
+
     func welcomeMessage(name:String){
         self.loginMessage.text = "Welcome back \(name)!"
     }

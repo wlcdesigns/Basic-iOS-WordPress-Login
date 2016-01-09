@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "57CFC4DF5A94826729A3A532FC59EE52"
-               BuildableName = "Pods.framework"
-               BlueprintName = "Pods"
+               BlueprintIdentifier = "2CA6AEEF56E2230F9C486B3C78906358"
+               BuildableName = "Pods_Basic_WordPress_Login.framework"
+               BlueprintName = "Pods-Basic WordPress Login"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "57CFC4DF5A94826729A3A532FC59EE52"
-            BuildableName = "Pods.framework"
-            BlueprintName = "Pods"
+            BlueprintIdentifier = "2CA6AEEF56E2230F9C486B3C78906358"
+            BuildableName = "Pods_Basic_WordPress_Login.framework"
+            BlueprintName = "Pods-Basic WordPress Login"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

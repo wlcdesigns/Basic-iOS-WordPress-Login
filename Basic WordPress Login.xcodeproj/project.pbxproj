@@ -15,7 +15,8 @@
 		7F6963AB1B7AAA6700538E7E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F6963A91B7AAA6700538E7E /* LaunchScreen.xib */; };
 		7F6963B71B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6963B61B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift */; };
 		7FC7FC251B7AE2D800A2CD56 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */; };
-		E79C945D453D30120C3D2FA5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699703C774D0F9074E85392A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E79C945D453D30120C3D2FA5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699703C774D0F9074E85392A /* Pods.framework */; };
+		F4B5A1955C9148B63CA5516B /* Pods_Basic_WordPress_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F583A0E23688F35BC908510B /* Pods_Basic_WordPress_Login.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		7F6963B61B7AAA6700538E7E /* Basic_WordPress_LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic_WordPress_LoginTests.swift; sourceTree = "<group>"; };
 		7FC7FC241B7AE2D800A2CD56 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CACD1E20BF886348C2F357CB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F583A0E23688F35BC908510B /* Pods_Basic_WordPress_Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Basic_WordPress_Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E79C945D453D30120C3D2FA5 /* Pods.framework in Frameworks */,
+				F4B5A1955C9148B63CA5516B /* Pods_Basic_WordPress_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				699703C774D0F9074E85392A /* Pods.framework */,
+				F583A0E23688F35BC908510B /* Pods_Basic_WordPress_Login.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -189,7 +193,8 @@
 		7F6963931B7AAA6700538E7E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "wLc Designs";
 				TargetAttributes = {
 					7F69639A1B7AAA6700538E7E = {
@@ -253,7 +258,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basic WordPress Login/Pods-Basic WordPress Login-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2B304BB1A34F9458A2E4A5F0 /* Check Pods Manifest.lock */ = {
@@ -283,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Basic WordPress Login/Pods-Basic WordPress Login-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,6 +364,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -426,6 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Basic WordPress Login/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlcdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -437,6 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Basic WordPress Login/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlcdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -455,6 +463,7 @@
 				);
 				INFOPLIST_FILE = "Basic WordPress LoginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlcdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basic WordPress Login.app/Basic WordPress Login";
 			};
@@ -470,6 +479,7 @@
 				);
 				INFOPLIST_FILE = "Basic WordPress LoginTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wlcdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Basic WordPress Login.app/Basic WordPress Login";
 			};
