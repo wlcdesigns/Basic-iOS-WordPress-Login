@@ -14,6 +14,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
 
     @IBOutlet weak var loginMessage: UILabel!
     @IBOutlet weak var proceedButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
     lazy var json : JSON = JSON.null
     
@@ -51,6 +52,7 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
                     return
                 }
                 
+                self.logoutButton.hidden = false
                 self.welcomeMessage(name)
                 
         }
@@ -89,6 +91,23 @@ class ViewController: UIViewController, LoginViewControllerDelegate, UIPopoverPr
 
     func welcomeMessage(name:String){
         self.loginMessage.text = "Welcome back \(name)!"
+        
+        //Show Logout Button upon succesful login
+        self.logoutButton.hidden = false
+    }
+    
+    
+    @IBAction func logOut(sender: AnyObject) {
+        
+        Alamofire.request(.POST, myWordPressSite, parameters: ["check_login": 3])
+            .responseJSON { response in
+            
+            self.loginMessage.text = "You are not logged in."
+            self.proceedButton.hidden = false
+            self.logoutButton.hidden = true
+ 
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

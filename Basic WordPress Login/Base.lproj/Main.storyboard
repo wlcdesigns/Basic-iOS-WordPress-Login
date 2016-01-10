@@ -103,13 +103,26 @@
                                     <action selector="goLogin:" destination="e6L-q9-efq" eventType="touchUpInside" id="wDQ-fh-u64"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSN-H5-MUQ">
+                                <rect key="frame" x="22" y="188" width="330" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.20762845390000001" blue="0.19541646260000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="e6L-q9-efq" eventType="touchUpInside" id="cdF-Pe-IfF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mSN-H5-MUQ" firstAttribute="top" secondItem="fJK-x7-qf7" secondAttribute="bottom" constant="23" id="2l1-xI-MhQ"/>
                             <constraint firstItem="fJK-x7-qf7" firstAttribute="top" secondItem="s1D-Jr-0nJ" secondAttribute="bottom" constant="35" id="4rY-aj-yZl"/>
                             <constraint firstItem="fJK-x7-qf7" firstAttribute="centerX" secondItem="s1D-Jr-0nJ" secondAttribute="centerX" id="URc-OM-iTH"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="top" secondItem="pGN-bo-1OC" secondAttribute="bottom" constant="36" id="VH7-QF-3GG"/>
                             <constraint firstAttribute="centerX" secondItem="s1D-Jr-0nJ" secondAttribute="centerX" id="WRc-vM-AOL"/>
+                            <constraint firstItem="mSN-H5-MUQ" firstAttribute="trailing" secondItem="fJK-x7-qf7" secondAttribute="trailing" id="YEO-Mv-Sh2"/>
+                            <constraint firstItem="mSN-H5-MUQ" firstAttribute="leading" secondItem="fJK-x7-qf7" secondAttribute="leading" id="Yct-ew-7HZ"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="trailing" secondItem="F1p-aL-wJN" secondAttribute="trailingMargin" id="jVL-yj-YaE"/>
                             <constraint firstItem="s1D-Jr-0nJ" firstAttribute="leading" secondItem="F1p-aL-wJN" secondAttribute="leadingMargin" id="ng2-Ca-GWb"/>
                             <constraint firstItem="ZW9-Wn-4gw" firstAttribute="top" secondItem="fJK-x7-qf7" secondAttribute="bottom" constant="502" id="zDh-qj-RDS"/>
@@ -119,6 +132,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="loginMessage" destination="s1D-Jr-0nJ" id="gWN-QH-Dph"/>
+                        <outlet property="logoutButton" destination="mSN-H5-MUQ" id="4wF-sP-jmn"/>
                         <outlet property="proceedButton" destination="fJK-x7-qf7" id="mAY-YP-gZi"/>
                     </connections>
                 </viewController>
